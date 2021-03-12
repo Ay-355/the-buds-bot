@@ -8,7 +8,7 @@ __pycache__
 .vscode/
 
 # Info
-clan_tags.json
+clan_info.json
 role_id.json
 utilityfuncs.py
 
