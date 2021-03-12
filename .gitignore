@@ -1,0 +1,18 @@
+# Creds and login details
+creds.py
+
+# py cache
+__pycache__
+
+# vscode
+.vscode/
+
+# Info
+clan_tags.json
+role_id.json
+utilityfuncs.py
+
+# Database
+*.db
+*db-journal
+

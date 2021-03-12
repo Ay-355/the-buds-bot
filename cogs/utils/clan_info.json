@@ -1,0 +1,144 @@
+{
+    "main clans":
+        {
+            "the buds":
+                {
+                    "tag": "#8CU9UG22",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=8CU9UG22",
+                    "level": 21,
+                    "leader": "JokerV905",
+                    "type": "Invite only",
+                    "public war log": true,
+                    "required townhall level": 10,
+                    "location": "United States"
+                },
+            "deadly mercs":
+                {
+                    "tag": "#9JJ28GUL",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=9JJ28GUL",
+                    "level": 17,
+                    "leader": "Cameron",
+                    "type": "Invite only",
+                    "public war log": false,
+                    "required townhall level": 11,
+                    "location": "International"
+                },
+            "the mini buds":
+                {
+                    "tag": "#2PGYJC08J",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=2PGYJC08J",
+                    "level": 10,
+                    "leader": "Rage",
+                    "type": "Invite only",
+                    "public war log": true,
+                    "required townhall level": 7,
+                    "location": "International"
+                },
+            "bad vibes":
+                {
+                    "tag": "#2Y0VV2PCQ",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=2Y0VV2PCQ",
+                    "level": 9,
+                    "leader": "KingAndre",
+                    "type": "Invite only",
+                    "public war log": false,
+                    "required townhall level": 7,
+                    "location": "United States"
+                },
+            "lucifer":
+                {
+                    "tag": "#GGRU88GV",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=GGRU88GV",
+                    "level": 13,
+                    "leader": "MaxRS7",
+                    "type": "Invite only",
+                    "public war log": false,
+                    "required townhall level": 13,
+                    "location": "International"
+                },
+            "dark zenith":
+                {
+                    "tag": "#29GVPCYGQ",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=29GVPCYGQ",
+                    "level": 5,
+                    "leader": "Master clash",
+                    "type": "Anyone can join",
+                    "public war log": true,
+                    "required townhall level": 1,
+                    "location": "United States"
+                },
+            "fish market":
+                {
+                    "tag": "#2YVPJQ09R",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=2YVPJQ09R",
+                    "level": 4,
+                    "leader": "SCARECROW",
+                    "type": "Invite Only",
+                    "public war log": true,
+                    "required townhall level": 7,
+                    "location": "Australia"
+                },
+            "outcast":
+                {
+                    "tag": "#28LJL8JQG",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=28LJL8JQG",
+                    "level": 10,
+                    "leader": "JoWorthy",
+                    "type": "Invite only",
+                    "public war log": false,
+                    "required townhall level": 7,
+                    "location": "International"
+                },
+            "nina":
+                {
+                    "tag": "#2Y9CQLQ2Y",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=2Y9CQLQ2Y",
+                    "level": 5,
+                    "leader": "Krish and Prem B",
+                    "type": "Invite only",
+                    "public war log": false,
+                    "required townhall level": 7,
+                    "location": "United States"
+                }
+        },
+
+
+    "cwl clans":
+        {
+            "ruthless":
+                {
+                    "tag": "#2P28G9VC8",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=2P28G9VC8",
+                    "level": 4,
+                    "leader": "Rage",
+                    "type": "Anyone can join",
+                    "public war log": false,
+                    "required townhall level": 3,
+                    "location": "International"
+                },
+            "shiva spirit":
+                {
+                    "tag": "#YYGGLL8C",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=YYGGLL8C",
+                    "level": 10,
+                    "leader": "Soul of Shiva",
+                    "type": "Invite only",
+                    "public war log": false,
+                    "required townhall level": 7,
+                    "location": "India"
+                },
+            "spawn of satan":
+                {
+                    "tag": "#2YJCVRRQR",
+                    "link": "https://link.clashofclans.com/en?action=OpenClanProfile&tag=2YJCVRRQR",
+                    "level": 2,
+                    "leader": "Zebty",
+                    "type": "Invite only",
+                    "public war log": true,
+                    "required townhall level": 4,
+                    "location": "International"
+                }
+            
+        }
+    
+}
