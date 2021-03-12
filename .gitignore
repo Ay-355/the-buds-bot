@@ -8,9 +8,10 @@ __pycache__
 .vscode/
 
 # Info
-clan_info.json
+
 role_id.json
 utilityfuncs.py
+cogs\utils\clan_info.json
 
 # Database
 *.db
