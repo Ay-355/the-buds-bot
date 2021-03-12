@@ -12,22 +12,22 @@ async def check_guild_permissions(ctx, perms, check=all):
 
 
 
-# def manage_guild():
-#     async def pred(ctx):
-#         perms = await check_guild_permissions(ctx, {'manage_guild': True})
-#         if not perms:
-#             raise commands.CheckFailure('You must have **Manage Server** permissions to use this command!')
-#         return True
-#     return commands.check(pred)
+def manage_guild():
+    async def pred(ctx):
+        perms = await check_guild_permissions(ctx, {'manage_guild': True})
+        if not perms:
+            raise commands.CheckFailure('You must have **Manage Server** permissions to use this command!')
+        return True
+    return commands.check(pred)
 
 
-# def admin():
-#     async def pred(ctx):
-#         perms = await check_guild_permissions(ctx, {'administrator': True})
-#         if not perms:
-#             raise commands.CheckFailure('You must have **Administrator** permissions to use this command!')
-#         return True
-#     return commands.check(pred)
+def admin():
+    async def pred(ctx):
+        perms = await check_guild_permissions(ctx, {'administrator': True})
+        if not perms:
+            raise commands.CheckFailure('You must have **Administrator** permissions to use this command!')
+        return True
+    return commands.check(pred)
 
 
 

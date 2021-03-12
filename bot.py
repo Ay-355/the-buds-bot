@@ -33,15 +33,10 @@ coc_client = coc.login(
     )
 
 
-intents = discord.Intents(
-    guilds=True,
-    members=True,
-    bans=True,
-    emojis=True,
-    voice_states=True,
-    messages=True,
-    reactions=True,
-)
+intents = discord.Intents.all()
+intents.members = True
+
+
 
 
 
@@ -117,9 +112,4 @@ if __name__ == "__main__":
         bot.run(creds.discord_bot_token)
     except:
         traceback.print_exc()
-
-
-
-
-
 
