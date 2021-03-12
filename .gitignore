@@ -11,7 +11,9 @@ __pycache__
 
 role_id.json
 utilityfuncs.py
-cogs\utils\clan_info.json
+clan_info.json
+constants.py
+
 
 # Database
 *.db
