@@ -13,6 +13,7 @@ Language: Python
 API: [Clash of Clans API](https://developer.clashofclans.com/#/)
 
 Wrapper: [coc.py](https://github.com/mathsman5133/coc.py)
+
 ---
 ## Credits
 
