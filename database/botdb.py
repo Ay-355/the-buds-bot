@@ -67,9 +67,11 @@ class BotDatabase:
         c = self.conn.cursor()
         c.execute("SELECT discord_id FROM server_players WHERE coc_tag =?", tuple_data)
         results = c.fetchone()
-        return results
-
-
+        if results is None:
+            return None
+        else:
+            for row in results:
+                return row
 
 
 
@@ -160,6 +162,7 @@ class BotDatabase:
             role_list.append(tag)
         return role_list
 
+
     def get_linked_clans(self, tuple_data):
         """gets all the clans that are linked to clans in a guild
 
@@ -212,14 +215,16 @@ class BotDatabase:
 
 
 
-def remove_user_from_server_players_with_coc_tag(self, tuple_data):
-    """removes an entry from the server_players database"""
-    c = self.conn.cursor()
-    c.execute("""DELETE FROM server_players WHERE coc_tag=?""", tuple_data)
+    def remove_user_from_server_players_with_coc_tag(self, tuple_data):
+        """removes an entry from the server_players database"""
+        c = self.conn.cursor()
+        c.execute("""DELETE FROM server_players WHERE coc_tag=?""", tuple_data)
+        self.conn.commit()
 
 
 
-def remove_role_from_role_to_tag(self, tuple_data):
-    """removes a row from role_to_tag"""
-    c = self.conn.cursor()
-    c.execute("""DELETE FROM role_to_tag WHERE role_id=? AND guild_id=?""", tuple_data)
+    def remove_role_from_role_to_tag(self, tuple_data):
+        """removes a row from role_to_tag"""
+        c = self.conn.cursor()
+        c.execute("""DELETE FROM role_to_tag WHERE role_id=? AND guild_id=?""", tuple_data)
+        self.conn.commit()

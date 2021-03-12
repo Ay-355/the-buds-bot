@@ -67,6 +67,7 @@ class BudBot(commands.Bot):
                         intents=intents
                         )
 
+
         self.coc = coc_client
         self.owner_ids = creds.owner_ids                    #Me and my alts
         self.client_id = creds.discord_client_id
