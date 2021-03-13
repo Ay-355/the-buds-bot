@@ -46,7 +46,8 @@ initial_extensions = (
     "cogs.auto_role",
     "cogs.moderation",
     "cogs.attack_strats",
-    "cogs.misc"
+    "cogs.misc",
+    "cogs.welcome"
 )
 
 # Important stuff
