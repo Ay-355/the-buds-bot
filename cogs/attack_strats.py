@@ -1,13 +1,13 @@
 import discord
 from discord.ext import commands
-import traceback
-
 
 
 class AttackStrats(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
+
+
 
 
     @commands.group()
@@ -25,38 +25,62 @@ class AttackStrats(commands.Cog):
 
     @th8.command(name="hogs")
     async def th8_hogs(self, ctx):
-        try:
-            th8_hogsEmbed = discord.Embed(
-                title="TH8 Hogs", 
-                description="**ARMY COMPOSITION:**```\nTroops: 32 Hog Riders, 10 Wizards\nSpells: 3 Heals, 1 Poison\nCC: 5 high level hog riders\n```\n **ATTACKING:\n**", 
-                color=discord.Color.dark_gold())
+
+        th8_hogsEmbed = discord.Embed(
+            title="TH8 Hogs", 
+            description="**ARMY COMPOSITION:**```\nTroops: 32 Hog Riders, 10 Wizards\nSpells: 3 Heals, 1 Poison\nCC: 5 high level hog riders\n```\n **ATTACKING:\n**", 
+            color=self.bot.colors
+        )
+
+        th8_hogsEmbed.add_field(
+            name="Step 1- Dealing the clan castle troops:", 
+            value="Send a hog in to lure out the cc. If it doesn't come out the send another one. Luring out the cc is very important because it can destroy all of your hogs. Once the cc is lured, drop your poison on the cc, drop your king and about 5 wizards. The king will suck up the damage while the wizards take out the cc.\n", 
+            inline=False
+        )
+
+        th8_hogsEmbed.add_field(
+            name="Step 2- Attacking:", 
+            value="Drop your hogs and cc on the defenses once the enemy cc is gone. It is better to drop them on each defense, but don't spread them out too much or they wont be effective. As soon as the hogs have taken out the first initial defense drop your wizards behind. Clean up is very important with hogs. As your hogs make their way around the base, they have to be kept healed. Drop heal spells as the hogs go while looking out for giant bombs. Giant bombs will take out all of your hogs, so make sure you are watching and are ready to drop a spell when you see one.\n", 
+            inline=False
+        )
+
+        th8_hogsEmbed.add_field(
+            name="Step 3- Clean up:", 
+            value="Once all the defenses are destroyed the wizards should have cleaned up a lot, and the hogs will then take care of the last few buildings.\n", 
+            inline=False
+        )
 
 
-            th8_hogsEmbed.add_field(
-                name="Step 1- Dealing the clan castle troops:", 
-                value="Send a hog in to lure out the cc. If it doesn't come out the send another one. Luring out the cc is very important because it can destroy all of your hogs. Once the cc is lured, drop your poison on the cc, drop your king and about 5 wizards. The king will suck up the damage while the wizards take out the cc.\n", 
-                inline=False)
+        await ctx.send(embed=th8_hogsEmbed)
 
-            th8_hogsEmbed.add_field(
-                name="Step 2- Attacking:", 
-                value="Drop your hogs and cc on the defenses once the enemy cc is gone. It is better to drop them on each defense, but don't spread them out too much or they wont be effective. As soon as the hogs have taken out the first initial defense drop your wizards behind. Clean up is very important with hogs. As your hogs make their way around the base, they have to be kept healed. Drop heal spells as the hogs go while looking out for giant bombs. Giant bombs will take out all of your hogs, so make sure you are watching and are ready to drop a spell when you see one.\n", 
-                inline=False)
-
-            th8_hogsEmbed.add_field(
-                name="Step 3- Clean up:", 
-                value="Once all the defenses are destroyed the wizards should have cleaned up a lot, and the hogs will then take care of the last few buildings.\n", 
-                inline=False)
-
-            await ctx.send(embed=th8_hogsEmbed)
-
-        except:
-            traceback.print_exc()
 
 
 
     @th8.command(name="dragons")
     async def th8_dragons(self, ctx):
-        await ctx.send()
+
+        th8_dragonsEmbed = discord.Embed(
+            title="TH8 Dragons",
+            description="**ARMY COMPOSITION**```\nTroops: 10 Dragons\nSpells: 3 Rages, 1 Poison\nCC: Balloons\n```\n**ATTACKING**\n",
+            color = self.bot.colors
+        )
+
+        th8_dragonsEmbed.add_field(
+            name="Step 1- Funneling:",
+            value="Drop your king on one side of the base and a dragon on the other side. We want our dragons to go to the center, not go around the base. The king and dragon will funnel so our main army goes down to the middle.",
+            inline=False
+        )
+
+        th8_dragonsEmbed.add_field(
+            name="Step 2- Main Army:",
+            value=""
+        )
+
+
+
+
+
+        await ctx.send(embed=th8_dragonsEmbed)
 
 
 

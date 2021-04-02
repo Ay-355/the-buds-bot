@@ -1,7 +1,7 @@
 import datetime
 import json
 import traceback
-
+import random
 import coc
 import discord
 from discord.ext import commands
@@ -47,7 +47,7 @@ initial_extensions = (
     "cogs.moderation",
     "cogs.attack_strats",
     "cogs.misc",
-    "cogs.welcome"
+    # "cogs.welcome"
 )
 
 # Important stuff
@@ -74,7 +74,7 @@ class BudBot(commands.Bot):
         self.client_id = creds.discord_client_id
         self.bot_id = creds.discord_bot_id
         self.uptime = datetime.datetime.utcnow()
-
+        self.colors = random.randint(0, 0xffffff)
 
 
         # Starts the database file
