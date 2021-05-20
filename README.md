@@ -1,3 +1,10 @@
+# Notice
+
+**I am no longer affilated with the alliance or the game so this won't be updated anymore**
+
+---
+
+
 # The Buds Bot
 
 **Discord Bot made to help with the Buds Alliance**
@@ -20,10 +27,6 @@ Wrapper: [coc.py](https://github.com/mathsman5133/coc.py)
 ---
 My discord: Ay355#0905
 
-**If you want to see the bot please join our alliance's server.**
 
-Invite link (Should not expire): https://discord.gg/VTHY2p9wD4
-
-
-Also a thank you to the people of the [COC API Junkies](https://discord.gg/Eaja7gJ) server, lots of helpful information there
+People of the [COC API Junkies](https://discord.gg/Eaja7gJ) server, helped a lot, thanks a lot.
 
