@@ -40,26 +40,17 @@ with open(r"cogs\utils\role_id.json") as f:
 
 def check_if_has_leader_role(ctx):
     leader_role = int(roles_ids['special_roles']['leader'])
-    if leader_role in ctx.author.roles:
-        return True
-    else:
-        return False
+    return leader_role in ctx.author.roles
 
 
 def check_if_has_coleader_role(ctx):
     co_leader_role = int(roles_ids['special_roles']["co-leader"])
-    if co_leader_role in ctx.author.roles:
-        return True
-    else:
-        return False
+    return co_leader_role in ctx.author.roles
 
 
 def check_if_has_clan_member_role(ctx):
     clan_member_role = int(roles_ids['special_roles']['clan members'])
-    if clan_member_role in ctx.author.roles:
-        return True
-    else:
-        return False
+    return clan_member_role in ctx.author.roles
 
 
 # Functions to see

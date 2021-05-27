@@ -16,13 +16,9 @@ class GameInfo(commands.Cog):
             clan = await self.bot.coc.get_clan(clantag)
         except coc.NotFound:
             await ctx.send("This clan doesn't exist")
-        
 
-        if clan.public_war_log is False:
-            war_log = 'Private'
-        else:
-            war_log = 'Public'
 
+        war_log = 'Private' if clan.public_war_log is False else 'Public'
         claninfoEmbed = discord.Embed(title=f"Clan stats for {clan.name}", colour=discord.Color.blue())
         claninfoEmbed.set_thumbnail(url=clan.badge.url)
         claninfoEmbed.add_field(name=f"Tag", value=f"{clan.tag}\n[Open in game]({clan.share_link})", inline=True)
