@@ -81,8 +81,7 @@ class BotDatabase:
         sql = """SELECT * FROM server_players"""
         c = self.conn.cursor()
         c.execute(sql)
-        results = c.fetchall()
-        return results
+        return c.fetchall()
 
 
     def get_tags(self):
@@ -103,8 +102,7 @@ class BotDatabase:
         sql = "SELECT coc_th FROM server_players"
         c = self.conn.cursor()
         c.execute(sql)
-        results = c.fetchall()
-        return results
+        return c.fetchall()
 
 
     # def update_server_players(self, tuple_data):
@@ -127,8 +125,7 @@ class BotDatabase:
         """
         c = self.conn.cursor()
         c.execute("""UPDATE server_players SET coc_th=? WHERE coc_tag=?""", tuple_data)
-        results = c.fetchall()
-        return results
+        return c.fetchall()
 
 
     def link_role_to_tag(self, tuple_data):
@@ -184,8 +181,7 @@ class BotDatabase:
         c.execute("""SELECT role_id FROM role_to_tag WHERE clan_tag=? AND guild_id=?""", tuple_data)
         results = c.fetchall()
         for row in results:
-            id = row[0]
-            return id
+            return row[0]
 
 
 

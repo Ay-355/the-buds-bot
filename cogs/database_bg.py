@@ -22,7 +22,7 @@ class DatabaseBackground(commands.Cog):
 
     #! First we have to add the account to the database
 
-    @commands.command(name="adduser")  
+    @commands.command(name="adduser")
     @is_owner()   #TODO Also update member nickname to be the format (f"{player.name} | {player.clan.name}"), and if they already have one of those leave it
     async def adduser(self, ctx, player_tag, member: discord.Member):
 
@@ -43,9 +43,9 @@ class DatabaseBackground(commands.Cog):
             player_th = int(player.town_hall)
             th_role_id = await getTownhall(int(player_th))
             th_role = ctx.author.guild.get_role(int(th_role_id))
-            if th_role_id == None:
+            if th_role_id is None:
                 await ctx.send("Couldn't add Townhall role")
-            
+
             await member.add_roles(th_role)
             await ctx.send(f"Added the player's townhall role ({player.town_hall})")
 
@@ -58,9 +58,8 @@ class DatabaseBackground(commands.Cog):
 
             if bar in old_name:
                 return
-            else:
-                nick_format = f"{player.name} | {player.clan.name}"
-                await member.edit(nick=nick_format)
+            nick_format = f"{player.name} | {player.clan.name}"
+            await member.edit(nick=nick_format)
 
 
 
@@ -97,7 +96,7 @@ class DatabaseBackground(commands.Cog):
         try:
             tags = self.bot.dbconn.get_player_with_id((member_id,))
 
-            if tags == None:
+            if tags is None:
 
                 await ctx.send("There are no accounts currently registered")
 
@@ -111,11 +110,7 @@ class DatabaseBackground(commands.Cog):
                     except:
                         await ctx.send("There was an error")
 
-                    if player.clan is None:
-                        player_clan = "Not in a clan"
-                    else:
-                        player_clan = player.clan.name
-
+                    player_clan = "Not in a clan" if player.clan is None else player.clan.name
                     accountsEmbed.add_field(
                         name=f"**{tag}**", 
                         value=f"[Open in game]({player.share_link})\nName: {player.name}\nTH: {player.town_hall}\nClan: {player_clan}\n", 
@@ -258,16 +253,14 @@ class DatabaseBackground(commands.Cog):
                 player = self.bot.coc.get_player(user[1])
             except:
                 print(f"There was an error with {user[1]}")
-        
+
 
             registered_th = self.bot.dbconn.get_townhall
             old_th_role = f"Townhall {registered_th}"
             current_player_th = await getTownhall(player.town_hall)
             new_th_role = f"Townhall {current_player_th}"
 
-            if str(registered_th) == str(current_player_th):
-                pass
-            else:
+            if str(registered_th) != str(current_player_th):
                 self.bot.dbconn.update_user_th((player.town_hall,))
 
             ser_member = user[0]
