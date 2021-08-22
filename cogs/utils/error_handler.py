@@ -28,11 +28,5 @@ async def error_handler(ctx, error):
     if isinstance(error, discord.Forbidden):
         return
 
-    if isinstance(error, discord.NotFound):
-        return
-
-    if isinstance(error, commands.CommandError):
-        return
-
     return traceback.print_exc()
 
