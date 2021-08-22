@@ -56,11 +56,7 @@ class AutoRole(commands.Cog):
 
                 role_to_give_id = self.bot.dbconn.get_role_from_clan_tag((clan.tag, guild.id,))
                 role_to_give = guild.get_role(role_to_give_id)
-
-                if role_to_give in disc_member.roles:
-                    return
-                else:
-                    await disc_member.add_roles(role_to_give)
+                await disc_member.add_roles(role_to_give)
 
             except:
                 traceback.print_exc()
@@ -92,11 +88,7 @@ class AutoRole(commands.Cog):
 
                 role_to_remove_id = self.bot.dbconn.get_role_from_clan_tag((clan.tag, guild.id,))
                 role_to_remove = guild.get_role(role_to_remove_id)
-
-                if role_to_remove not in disc_member.roles:
-                    return
-                else:
-                    await disc_member.remove_roles(role_to_remove)
+                await disc_member.remove_roles(role_to_remove)
 
             except:
                 traceback.print_exc()
@@ -110,16 +102,7 @@ class AutoRole(commands.Cog):
 
 
 
-
-
-
-
-
-
-
 def setup(bot):
     bot.add_cog(AutoRole(bot))
-
-
 
 
