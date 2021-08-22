@@ -6,15 +6,13 @@ import json
 async def check_guild_permissions(ctx, perms, check=all):
     if await ctx.bot.is_owner(ctx.author):
         return True
-    is_owner = await ctx.bot.is_owner(ctx.author)
-    if is_owner:
-        return True
+    return perms in dict(ctx.author.guild_permissions).
 
 
 
 def manage_guild():
     async def pred(ctx):
-        perms = await check_guild_permissions(ctx, {'manage_guild': True})
+        perms = await check_guild_permissions(ctx, 'manage_guild')
         if not perms:
             raise commands.CheckFailure('You must have **Manage Server** permissions to use this command!')
         return True
@@ -23,7 +21,7 @@ def manage_guild():
 
 def admin():
     async def pred(ctx):
-        perms = await check_guild_permissions(ctx, {'administrator': True})
+        perms = await check_guild_permissions(ctx, 'administrator')
         if not perms:
             raise commands.CheckFailure('You must have **Administrator** permissions to use this command!')
         return True
