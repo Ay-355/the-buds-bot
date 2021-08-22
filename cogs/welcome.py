@@ -21,7 +21,8 @@ class Welcome(commands.Cog):
     @commands.Cog.listener()
     async def on_member_leave(self, member):
         leave_messages = [
-            f"{member.display_name} just left the server."
-            f"Someone just left the server."
+            f"{member.display_name} just left the server.",
+            f"Someone just left the server.",
+            f"{member.name} abandoned the server"
         ]
         await self.member_log_channel.send(random.choice(leave_messages))
