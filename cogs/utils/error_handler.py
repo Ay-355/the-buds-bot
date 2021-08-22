@@ -12,8 +12,10 @@ async def error_handler(ctx, error):
         return await ctx.send("You do not have the required permissions needed to do that")
 
     if isinstance(error, commands.MissingRequiredArgument):
-        return await ctx.send(f"Hmm, looks like you are missing a required argument. "
-                        "Please do `{ctx.prefix}help command` for more info")
+        return await ctx.send(
+            'Hmm, looks like you are missing a required argument. Please do `{ctx.prefix}help command` for more info'
+        )
+
 
     if isinstance(error, commands.BotMissingPermissions):
         return await ctx.send("Looks like I don't have the required permissions to do this. "
