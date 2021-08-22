@@ -6,7 +6,7 @@ import json
 async def check_guild_permissions(ctx, perms, check=all):
     if await ctx.bot.is_owner(ctx.author):
         return True
-    return perms in dict(ctx.author.guild_permissions).
+    return perms in dict(ctx.author.guild_permissions)
 
 
 
