@@ -54,11 +54,7 @@ class BotDatabase:
         c = self.conn.cursor()
         c.execute("SELECT coc_tag FROM server_players WHERE discord_id =?", tuple_data)
         results = c.fetchall()
-        tag_list = []
-        for row in results:
-            tag = row[0]
-            tag_list.append(tag)
-        return tag_list
+        return [row[0] for row in results]
 
 
     def get_member_with_tag(self, tuple_data):
@@ -69,9 +65,8 @@ class BotDatabase:
         results = c.fetchone()
         if results is None:
             return None
-        else:
-            for row in results:
-                return row
+        for row in results:
+            return row
 
 
 
@@ -89,11 +84,7 @@ class BotDatabase:
         c = self.conn.cursor()
         c.execute(sql)
         results = c.fetchall()
-        tag_list = []
-        for row in results:
-            tag = row[0]
-            tag_list.append(tag)
-        return tag_list
+        return [row[0] for row in results]
 
 
 
@@ -153,11 +144,7 @@ class BotDatabase:
         c = self.conn.cursor()
         c.execute("""SELECT role_id FROM role_to_tag WHERE guild_id=?""", tuple_data)
         results = c.fetchall()
-        role_list = []
-        for row in results:
-            tag = row[0]
-            role_list.append(tag)
-        return role_list
+        return [row[0] for row in results]
 
 
     def get_linked_clans(self, tuple_data):
@@ -169,11 +156,7 @@ class BotDatabase:
         c = self.conn.cursor()
         c.execute("""SELECT clan_tag FROM role_to_tag WHERE guild_id=?""", tuple_data)
         results = c.fetchall()
-        tag_list = []
-        for row in results:
-            tag = row[0]
-            tag_list.append(tag)
-        return tag_list
+        return [row[0] for row in results]
 
 
     def get_role_from_clan_tag(self, tuple_data):
@@ -203,11 +186,7 @@ class BotDatabase:
         c = self.conn.cursor()
         c.execute("""SELECT clan_tag FROM role_to_tag""")
         results = c.fetchall()
-        tag_list = []
-        for row in results:
-            tag = row[0]
-            tag_list.append(tag)
-        return tag_list
+        return [row[0] for row in results]
 
 
 

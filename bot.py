@@ -95,7 +95,7 @@ class BudBot(commands.Bot):
 
     async def on_ready(self):
         print(f"Logged in as {self.user}\nID: {self.user.id}\nDiscord Version: {discord.__version__}\nCoc Version: {coc.__version__}")
-        activity = discord.Game(f"Getting 99% | ,help")
+        activity = discord.Game('Getting 99% | ,help')
         await self.change_presence(status=discord.Status.online, activity=activity)
 
 
