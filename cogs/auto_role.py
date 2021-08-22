@@ -5,9 +5,6 @@ import discord
 
 from discord.ext import commands
 
-# clan_tags = "#2P28G9VC8"
-# buds_alliance_server_id = 747395805131833414
-
 
 class AutoRole(commands.Cog):
     """
@@ -35,7 +32,7 @@ class AutoRole(commands.Cog):
 
     @property
     def general_channel(self):
-        return self.bot.get_channel(802306491410415699)
+        return self.bot.get_channel(...)
 
 
 
@@ -52,7 +49,7 @@ class AutoRole(commands.Cog):
                 try:
                     user_id = self.bot.dbconn.get_member_with_tag((member.tag,))
 
-                    guild = self.bot.get_guild(747395805131833414)
+                    guild = self.bot.get_guild(...)
                     disc_member = guild.get_member(user_id)
 
                     role_to_give_id = self.bot.dbconn.get_role_from_clan_tag((clan.tag, guild.id,))
@@ -90,7 +87,7 @@ class AutoRole(commands.Cog):
                 try:
                     user_id = self.bot.dbconn.get_member_with_tag((member.tag,))
 
-                    guild = self.bot.get_guild(747395805131833414)
+                    guild = self.bot.get_guild(...)
                     disc_member = guild.get_member(user_id)
 
                     role_to_remove_id = self.bot.dbconn.get_role_from_clan_tag((clan.tag, guild.id,))
