@@ -1,6 +1,7 @@
-## This README is lacking cause I don't update this bot anymore, nor do I host it anymore. Its just here as an example for others.
+## Notice
 
-# The Buds Bot
+### This is all bad code from when I was starting with dpy. It's not formatted and there is a lot of redundant code. I won't be maintaining it anymore
+
 
 A discord bot for clash of clans players. Provides information for clash of clans things.
 
